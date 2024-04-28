@@ -1,0 +1,22 @@
+﻿<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs</xpath>
+		<value>
+			<ArchitectSense.DesignationSubCategoryDef>
+		<defName>SubCategory_AmmoContainers</defName>
+		<label>arsenal</label>
+		<description>Stores and safeguard weapons and ammo.</description>
+		<defNames>
+		    <li>Storage_SmallsContainer</li>
+			<li>LWM_WeaponsCabinet</li>
+			<li>Storage_HazMatContainer</li>
+			<li>Storage_ExplosiveContainer</li>
+			<li>LWM_WeaponsLocker</li>
+			<li>ClutterLockerA</li>
+		</defNames>
+		<designationCategory>LWM_DS_Storage</designationCategory>
+		<debug>false</debug>
+	</ArchitectSense.DesignationSubCategoryDef>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+
+<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+		<!-- PollutionPump patches -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HeavyPowerConduit"]/costList</xpath>
+				<value>
+					<costList>
+						<Wire>1</Wire>
+			            <ConcreteResource>3</ConcreteResource>
+					</costList>
+				</value>
+			</li>
+		
+		<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="HeavyPowerConduit"]/statBases</xpath>
+				<value>
+					<statBases>
+						<MaxHitPoints>250</MaxHitPoints>
+			            <WorkToBuild>225</WorkToBuild>
+					</statBases>
+				</value>
+			</li>
+	
+		</operations>
+	</Operation>
+
+</Patch>

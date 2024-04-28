@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="WallBase">
+		<defName>WallcomWire</defName>
+		<label>Стена с проводкой</label>
+		<description>Простая стена, что способна поддерживать крышу и с установленной проводкой.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/Wall</texPath>
+			<graphicClass>Graphic_Appearances</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<building>
+			<paintable>true</paintable>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+			<relatedBuildCommands>
+				<li>Door</li>
+				<li>MDoor</li>
+				<li>Autodoor</li>
+				<li>CellDoor</li>
+			</relatedBuildCommands>
+		</building>
+		 <coversFloor>true</coversFloor>
+         <blockLight>true</blockLight>
+        <castEdgeShadows>true</castEdgeShadows>
+        <canOverlapZones>false</canOverlapZones>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+		<uiIconPathsStuff>
+			<li>
+				<appearance>Planks</appearance>
+				<iconPath>Things/Building/Linked/WallPlanks_MenuIcon</iconPath>
+			</li>
+			<li>
+				<appearance>Bricks</appearance>
+				<iconPath>Things/Building/Linked/WallBricks_MenuIcon</iconPath>
+			</li>
+		</uiIconPathsStuff>
+			<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>380</MaxHitPoints>
+			<WorkToBuild>270</WorkToBuild>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Bricks</li>
+			<li>WoodLogs</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>6</costStuffCount>
+		<costList>
+			<Wire>1</Wire>
+		</costList>
+		<modExtensions>
+			<li Class="SK.Events.EarthquakeExtension">
+				<immunityToDamage>true</immunityToDamage>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+</Defs>

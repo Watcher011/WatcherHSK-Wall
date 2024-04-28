@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="LWM_DeepStorage">
+		<defName>Storage_SmallsContainer</defName>
+		<label>Ящик для боеприпасов</label>
+		<description>Деревянные армейские ящики – в первую очередь безопасная и удобная упаковка для транспортировки , хранения боеприпасов и оружия.Крышки закрепляются на двух мощных металлических петлях, а фиксируются с помощью замков, для предотвращения открытия во время транспортировки..</description>
+		<graphicData>
+			<texPath>Things/Building/Storage/Ammo_Crate</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.2,1.1)</drawSize>
+			<drawRotated>true</drawRotated>
+			<!--<shaderType>CutoutComplex</shaderType>-->
+			<shadowData>
+				<volume>(0.7, 0.3, 0.7)</volume>
+			</shadowData>
+		</graphicData>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>40</pathCost>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<costList>
+			<ComponentMedieval>3</ComponentMedieval>
+		</costList>
+		<statBases>
+			<MarketValue>350</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>850</WorkToBuild>
+			<Beauty>-3</Beauty>
+			<Bulk>37</Bulk>
+			<Mass>18</Mass>
+		</statBases>
+		<size>(1,1)</size>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<fixedStorageSettings>
+				<filter>
+					<categories>
+						<li>Ammo</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+		</building>
+		<comps>
+			<li Class="LWM.DeepStorage.Properties">
+				<maxNumberStacks>1</maxNumberStacks>
+				<minTimeStoringTakes>15</minTimeStoringTakes>
+				<additionalTimeEachStack>15</additionalTimeEachStack>
+				<showContents>false</showContents>
+				<overlayType>SumOfItemsPerCell</overlayType>
+			</li>
+			<li Class="SK.CompProperties_ContainerBase">
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>Storage_B1</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+	</ThingDef>
+	
+</Defs>
